@@ -167,7 +167,7 @@ namespace Arkivverket.Arkade.Core.Report
             _stream.WriteLine(@"                <td>");
             _stream.WriteLine(Resources.Report.LabelUuid);
             _stream.WriteLine("                </td>");
-            _stream.WriteLine(@"                <td>");
+            _stream.WriteLine(@"                <td id='archive-uuid'>");
             _stream.WriteLine(testSession.Archive.Uuid);
             _stream.WriteLine("                </td>");
             _stream.WriteLine(@"            </tr>");
@@ -176,7 +176,7 @@ namespace Arkivverket.Arkade.Core.Report
             _stream.WriteLine(@"                <td>");
             _stream.WriteLine(Resources.Report.LabelArchiveCreators);
             _stream.WriteLine("                </td>");
-            _stream.WriteLine(@"                <td>");
+            _stream.WriteLine(@"                <td id='archive-creators'>");
             _stream.WriteLine(testSession.Archive.Details.ArchiveCreators);
             _stream.WriteLine("                </td>");
             _stream.WriteLine(@"            </tr>");
@@ -185,7 +185,7 @@ namespace Arkivverket.Arkade.Core.Report
             _stream.WriteLine(@"                <td>");
             _stream.WriteLine(Resources.Report.LabelArchivePeriod);
             _stream.WriteLine("                </td>");
-            _stream.WriteLine(@"                <td>");
+            _stream.WriteLine(@"                <td id='archival-period'>");
             _stream.WriteLine(testSession.Archive.Details.ArchivalPeriod);
             _stream.WriteLine("                </td>");
             _stream.WriteLine(@"            </tr>");
@@ -194,7 +194,7 @@ namespace Arkivverket.Arkade.Core.Report
             _stream.WriteLine(@"                <td>");
             _stream.WriteLine(Resources.Report.LabelSystemName);
             _stream.WriteLine("                </td>");
-            _stream.WriteLine(@"                <td>");
+            _stream.WriteLine(@"                <td id='system-name'>");
             _stream.WriteLine(testSession.Archive.Details.SystemName);
             _stream.WriteLine("                </td>");
             _stream.WriteLine(@"            </tr>");
@@ -203,7 +203,7 @@ namespace Arkivverket.Arkade.Core.Report
             _stream.WriteLine(@"                <td>");
             _stream.WriteLine(Resources.Report.LabelSystemType);
             _stream.WriteLine("                </td>");
-            _stream.WriteLine(@"                <td>");
+            _stream.WriteLine(@"                <td id='system-type'>");
             _stream.WriteLine(testSession.Archive.Details.SystemType);
             _stream.WriteLine("                </td>");
             _stream.WriteLine(@"            </tr>");
@@ -212,7 +212,7 @@ namespace Arkivverket.Arkade.Core.Report
             _stream.WriteLine(@"                <td>");
             _stream.WriteLine(Resources.Report.LabelArchiveType);
             _stream.WriteLine("                 </td>");
-            _stream.WriteLine(@"                <td>");
+            _stream.WriteLine(@"                <td id='archive-type'>");
             _stream.WriteLine(testSession.Archive.ArchiveType);
             _stream.WriteLine("                 </td>");
             _stream.WriteLine(@"            </tr>");
@@ -221,7 +221,7 @@ namespace Arkivverket.Arkade.Core.Report
             _stream.WriteLine(@"                <td>");
             _stream.WriteLine(Resources.Report.LabelDateOfTesting);
             _stream.WriteLine("                 </td>");
-            _stream.WriteLine(@"                <td>");
+            _stream.WriteLine(@"                <td id='date-of-testing'>");
             _stream.WriteLine(testSession.DateOfTesting.ToString(Resources.Report.DateFormat, _norwegianCulture));
             _stream.WriteLine("                 </td>");
             _stream.WriteLine(@"            </tr>");
@@ -233,7 +233,7 @@ namespace Arkivverket.Arkade.Core.Report
                 _stream.WriteLine(@"                <td>");
                 _stream.WriteLine(Resources.Report.LabelNumberOfFilesProcessed);
                 _stream.WriteLine("                 </td>");
-                _stream.WriteLine(@"                <td>");
+                _stream.WriteLine(@"                <td id='number-of-processed-files'>");
                 _stream.WriteLine(testSession.TestSummary.NumberOfProcessedFiles);
                 _stream.WriteLine("                 </td>");
                 _stream.WriteLine(@"            </tr>");
@@ -244,7 +244,7 @@ namespace Arkivverket.Arkade.Core.Report
                     _stream.WriteLine(@"                <td>");
                     _stream.WriteLine(Resources.Report.LabelNumberOfRecordsProcessed);
                     _stream.WriteLine("                 </td>");
-                    _stream.WriteLine(@"                <td>");
+                    _stream.WriteLine(@"                <td id='number-of-processed-records'>");
                     _stream.WriteLine(testSession.TestSummary.NumberOfProcessedRecords);
                     _stream.WriteLine("                 </td>");
                     _stream.WriteLine(@"            </tr>");
@@ -255,7 +255,7 @@ namespace Arkivverket.Arkade.Core.Report
             _stream.WriteLine(@"                <td>");
             _stream.WriteLine(Resources.Report.LabelNumberOfErrors);
             _stream.WriteLine("                 </td>");
-            _stream.WriteLine(@"                <td>");
+            _stream.WriteLine(@"                <td id='number-of-errors'>");
             _stream.WriteLine(testSession.TestSuite.FindNumberOfErrors());
             _stream.WriteLine("                 </td>");
             _stream.WriteLine(@"            </tr>");
